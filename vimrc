@@ -63,4 +63,4 @@ for fpath in split(globpath('~/.vim/settings', '*.vim'), '\n')
   exe 'source' fpath
 endfor
 
-autocmd! bufwritepost .vimrc source ~/.vim/vimrc
+au bufwritepost .vimrc source ~/.vim/vimrc
