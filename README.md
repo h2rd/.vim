@@ -6,10 +6,11 @@ My vim config installation
     ```bash
     git clone https://github.com/h2rd/.vim ~/.vim
     ln -s ~/.vim/vimrc ~/.vimrc
-    git clone https://github.com/gmarik/vundle ~/.vim/bundle/
+    mkdir -p ~/.vim/bundle/
+    git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle/
     ```
 
 2. Install bundles:
 
-    Launch `vim`, run `:BundleInstall` 
+    Launch `vim`, run `:BundleInstall`
     (or `vim +BundleInstall +qall` for CLI lovers)
