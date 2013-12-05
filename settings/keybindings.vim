@@ -1,6 +1,7 @@
 " Show or hide numbers and set or unset wrap
 map <F2> :set number!<Bar>set number?<CR>
 map <F3> :set wrap!<Bar>set wrap?<CR>
+map <F4> :set colorcolumn=80<Bar>set colorcolumn?<CR>
 
 " Bind cmd+/ to comment line
 nmap <D-/> <C-_><C-_>
@@ -11,8 +12,8 @@ nmap <C-k> dd
 nmap <C-o> O<esc>
 
 " Copy line up and down
-nmap <S-up> yykp
-nmap <S-down> yyp
+" nmap <S-up> yykp
+" nmap <S-down> yyp
 nmap <D-]> >>
 nmap <C-t> >>
 vmap <D-]> >gv
@@ -38,4 +39,10 @@ nnoremap cc ciw
 
 " fast edit my .vimrc file
 nnoremap <leader>v :e ~/.vim/vimrc<cr>
-autocmd! bufwritepost .vimrc source ~/.vim/vimrc
+
+nnoremap <silent> n nzz
+nnoremap <silent> N Nzz
+nnoremap <silent> * *zz
+nnoremap <silent> # #zz
+nnoremap <silent> g* g*zz
+nnoremap <silent> g# g#zz
