@@ -15,7 +15,9 @@ Bundle 'tpope/vim-rsi'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-unimpaired'
-Bundle 'MarcWeber/snipmate.vim'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
 Bundle 'h2rd/vim-snipmate-mocha'
 Bundle 'pangloss/vim-javascript'
 Bundle 'jelera/vim-javascript-syntax'
