@@ -20,6 +20,7 @@ Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle 'h2rd/vim-snipmate-mocha'
 Bundle 'pangloss/vim-javascript'
+Bundle "honza/vim-snippets"
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-scripts/tComment'
