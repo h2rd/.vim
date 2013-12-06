@@ -12,13 +12,15 @@ nmap <C-k> dd
 nmap <C-o> O<esc>
 
 " Copy line up and down
-" nmap <S-up> yykp
-" nmap <S-down> yyp
+nmap <S-up> yykp
+nmap <S-down> yyp
 nmap <D-]> >>
 nmap <C-t> >>
 vmap <D-]> >gv
 nmap <D-[> <<
 vmap <D-[> <gv
+
+nmap Y y$
 
 map <Leader>, <C-^>
 map <leader>w :w!<cr>
