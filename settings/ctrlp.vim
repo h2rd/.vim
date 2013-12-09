@@ -8,4 +8,3 @@ let g:ctrlp_clear_cache_on_exit = 1
 
 nnoremap <leader>f :CtrlPRoot<CR>
 nnoremap <Leader>b :CtrlPBuffer<cr>
-

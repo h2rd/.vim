@@ -5,10 +5,7 @@ if has('gui_running')
     set guioptions-=l
     set guioptions-=b
     set guioptions=aiA
-    set mouse=v
     set macmeta
-    set mousehide
-    set mouse-=T
 
     " Map fast tabs
     map <D-1> 1gt
