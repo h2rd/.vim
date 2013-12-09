@@ -1,6 +1,8 @@
 filetype plugin indent on
 syntax on
 
+autocmd! bufwritepost ~/.vimrc source ~/.vim/vimrc
+
 " Bundles
 source ~/.vim/bundles.vim
 
@@ -14,13 +16,10 @@ imap >Ins> <Esc>i
 
 " Main Configuration
 set history=1000
+set undolevels=1000
 set shm=atI
 set noerrorbells
 set termencoding=utf-8
-set nocursorline
-set nocursorcolumn
-set scrolljump=7
-set scrolloff=7
 set noswapfile
 set grepprg=ack
 set autoindent
@@ -40,27 +39,27 @@ set hlsearch
 set incsearch
 set laststatus=2
 
+" Showing line numbers and length
+set number  " show line numbers
+set tw=79   " width of document (used by gd)
+set nowrap  " don't automatically wrap on load
+set fo-=t   " don't automatically wrap text when typing
+set colorcolumn=80
+
 " Indentation
 set expandtab ts=4 sw=4 ai
 set hidden
 set splitbelow splitright
-
-" Folds
-set foldmethod=indent
-set foldnestmax=3
-set nofoldenable
 
 " Indentation
 autocmd FileType javascript setlocal expandtab shiftwidth=2 softtabstop=2 cindent
 autocmd FileType ruby setlocal expandtab shiftwidth=2 softtabstop=2 cindent
 autocmd FileType *.ejs setlocal expandtab shiftwidth=2 softtabstop=2 cindent
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4 cindent
-au BufNewfile,BufRead *.tpl set filetype=html
-au BufNewFile,BufRead *.ejs set filetype=html
+autocmd BufNewfile,BufRead *.tpl set filetype=html
+autocmd BufNewFile,BufRead *.ejs set filetype=html
 
-" Settings
+" Require settings
 for fpath in split(globpath('~/.vim/settings', '*.vim'), '\n')
   exe 'source' fpath
 endfor
-
-au bufwritepost .vimrc source ~/.vim/vimrc
