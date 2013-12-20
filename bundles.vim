@@ -39,5 +39,8 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 
+Bundle 'benmills/vimux'
+Bundle 'LnL7/vim-tslime'
+
 Bundle 'davidhalter/jedi-vim'
 Bundle 'klen/python-mode'

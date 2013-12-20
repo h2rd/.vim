@@ -7,6 +7,10 @@ nmap <D-/> <C-_><C-_>
 vmap <D-/> <C-_><C-_>gv
 imap <D-/> <C-_><C-_>
 
+nmap cc <C-_><C-_>
+vmap cc <C-_><C-_>gv
+imap cc <C-_><C-_>
+
 nmap <C-k> dd
 nmap <C-o> O<esc>
 
@@ -38,8 +42,7 @@ inoremap '' ''<Left>
 nnoremap <Leader>S :%s/<C-r>=expand("<cword>")<CR>//<Left>
 nnoremap J mzJ`z
 nnoremap vv viw
-nnoremap cc ciw
-
+"
 " fast edit my .vimrc file
 nnoremap <leader>v :e ~/.vim/vimrc<cr>
 
@@ -57,3 +60,11 @@ vnoremap <leader>s :sort<CR>
 " The Smash Escape
 inoremap jk <Esc>
 inoremap kj <Esc>
+
+noremap <tab> <C-w>w
+
+vnoremap < <gv
+vnoremap > >gv
+
+noremap H ^
+noremap L $

@@ -8,7 +8,7 @@ source ~/.vim/bundles.vim
 
 let mapleader = ","
 
-set guifont=Monaco:h15
+set guifont=Monaco:h13
 set background=dark
 colorscheme Solarized
 
@@ -23,6 +23,7 @@ set termencoding=utf-8
 set noswapfile
 set grepprg=ack
 set autoindent
+set title
 set nowrap
 set list
 set listchars=trail:⋅,nbsp:⋅
@@ -50,6 +51,9 @@ set colorcolumn=80
 set expandtab ts=4 sw=4 ai
 set hidden
 set splitbelow splitright
+
+autocmd WinLeave * set nocursorline
+autocmd WinEnter * set cursorline
 
 " Indentation
 autocmd FileType javascript setlocal expandtab shiftwidth=2 softtabstop=2 cindent
