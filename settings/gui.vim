@@ -28,12 +28,6 @@ if has('gui_running')
     map <F12> :emenu Encoding.<Tab>
 
     " replace find higlight
-    nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
-
-    " Full screen VIM
-    nnoremap <D-enter> :set fullscreen!<cr>
-
-    nnoremap <esc> :noh<cr>
     noremap <D-M-Left> :tabprevious<cr>
     noremap <D-M-Right> :tabnext<cr>
 endif

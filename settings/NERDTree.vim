@@ -1,4 +1,6 @@
 " NERDTree
+let NERDTreeIgnore = ['\.pyc$']
+
 let g:NERDTreeShowBookmarks = 0
 let g:NERDChristmasTree = 1
 let g:NERDTreeWinPos = "left"

@@ -1,16 +1,3 @@
-" Show or hide numbers and set or unset wrap
-map <F2> :set number!<Bar>set number?<CR>
-map <F3> :set wrap!<Bar>set wrap?<CR>
-
-" Bind cmd+/ to comment line
-nmap <D-/> <C-_><C-_>
-vmap <D-/> <C-_><C-_>gv
-imap <D-/> <C-_><C-_>
-
-nmap cc <C-_><C-_>
-vmap cc <C-_><C-_>gv
-imap cc <C-_><C-_>
-
 nmap <C-k> dd
 nmap <C-o> O<esc>
 
@@ -30,6 +17,9 @@ map <Leader>, <C-^>
 map <leader>w :w!<cr>
 map <leader>W :wall!<cr>
 
+noremap H ^
+noremap L $
+
 map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 inoremap () ()<Left>
@@ -42,29 +32,62 @@ inoremap '' ''<Left>
 nnoremap <Leader>S :%s/<C-r>=expand("<cword>")<CR>//<Left>
 nnoremap J mzJ`z
 nnoremap vv viw
-"
+nnoremap cc ciw
+
+" prettyprint json
+nnoremap <leader>nnp :%!python -m json.tool<cr>
+
 " fast edit my .vimrc file
 nnoremap <leader>v :e ~/.vim/vimrc<cr>
 
 " Next search
 nnoremap <silent> n nzz
 nnoremap <silent> N Nzz
-nnoremap <silent> * *zz
-nnoremap <silent> # #zz
-nnoremap <silent> g* g*zz
-nnoremap <silent> g# g#zz
+nnoremap <silent> * *N
+nnoremap <silent> # #N
 
-" Sort things
 vnoremap <leader>s :sort<CR>
 
-" The Smash Escape
-inoremap jk <Esc>
-inoremap kj <Esc>
+" Select entire buffer
+nnoremap vaa ggvGg_
 
-noremap <tab> <C-w>w
+" Window commands
+nnoremap <silent> <leader>h :wincmd h<CR>
+nnoremap <silent> <leader>j :wincmd j<CR>
+nnoremap <silent> <leader>k :wincmd k<CR>
+nnoremap <silent> <leader>l :wincmd l<CR>
+nnoremap <silent> <leader>+ :wincmd +<CR>
+nnoremap <silent> <leader>- :wincmd -<CR>
+nnoremap <silent> <leader>cj :wincmd j<CR>:close<CR>
+nnoremap <silent> <leader>ck :wincmd k<CR>:close<CR>
+nnoremap <silent> <leader>ch :wincmd h<CR>:close<CR>
+nnoremap <silent> <leader>cl :wincmd l<CR>:close<CR>
+nnoremap <silent> <leader>cw :close<CR>
 
-vnoremap < <gv
-vnoremap > >gv
+" Allow command line editing like emacs
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-n> <Down>
+cnoremap <C-p> <Up>
 
-noremap H ^
-noremap L $
+" emacs style jump to end of line
+inoremap <C-e> <C-o>A
+inoremap <C-a> <C-o>I
+
+noremap <C-k> dd
+
+" Toggle paste mode
+noremap <leader>p :set paste!<CR>
+
+" Open new tab
+nnoremap <silent> <C-W>t :tabnew<CR>
+
+nnoremap <leader>uu :GundoToggle<CR>
+
+nnoremap gI `.
+nnoremap <left>  :cprev<cr>zvzz
+nnoremap <right> :cnext<cr>zvzz
+nnoremap <up>    :lprev<cr>zvzz
+nnoremap <down>  :lnext<cr>zvzz
+
+nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
