@@ -84,6 +84,8 @@ autocmd BufNewFile,BufRead *.ejs set filetype=html
 autocmd WinLeave * set nocursorline
 autocmd WinEnter * set cursorline
 
+set backspace=indent,eol,start
+
 " Some gui settings
 if has("gui_running")
     set guioptions=agimP

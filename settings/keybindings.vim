@@ -1,14 +1,8 @@
 nmap <C-k> dd
 nmap <C-o> O<esc>
 
-" Copy line up and down
-nmap <S-up> yykp
-nmap <S-down> yyp
-nmap <D-]> >>
-nmap <C-t> >>
-vmap <D-]> >gv
-nmap <D-[> <<
-vmap <D-[> <gv
+vnoremap < <gv
+vnoremap > >gv
 
 nmap Y y$
 
@@ -52,12 +46,6 @@ vnoremap <leader>s :sort<CR>
 nnoremap vaa ggvGg_
 
 " Window commands
-nnoremap <silent> <leader>h :wincmd h<CR>
-nnoremap <silent> <leader>j :wincmd j<CR>
-nnoremap <silent> <leader>k :wincmd k<CR>
-nnoremap <silent> <leader>l :wincmd l<CR>
-nnoremap <silent> <leader>+ :wincmd +<CR>
-nnoremap <silent> <leader>- :wincmd -<CR>
 nnoremap <silent> <leader>cj :wincmd j<CR>:close<CR>
 nnoremap <silent> <leader>ck :wincmd k<CR>:close<CR>
 nnoremap <silent> <leader>ch :wincmd h<CR>:close<CR>
@@ -73,8 +61,6 @@ cnoremap <C-p> <Up>
 " emacs style jump to end of line
 inoremap <C-e> <C-o>A
 inoremap <C-a> <C-o>I
-
-noremap <C-k> dd
 
 " Toggle paste mode
 noremap <leader>p :set paste!<CR>

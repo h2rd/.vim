@@ -42,7 +42,8 @@ Bundle 'digitaltoad/vim-jade'
 
 " Bundle 'vim-scripts/pipe2eval' " is not works
 Bundle 'buztard/vim-nomad'
-Bundle 'nanotech/jellybeans.vim'
 Bundle 'sjl/gundo.vim'
 
 Bundle 'christoomey/vim-tmux-navigator'
+
+Bundle 'nanotech/jellybeans.vim'
