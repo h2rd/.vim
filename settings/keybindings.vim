@@ -1,4 +1,3 @@
-nmap <C-k> dd
 nmap <C-o> O<esc>
 
 vnoremap < <gv

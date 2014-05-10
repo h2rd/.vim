@@ -28,19 +28,11 @@ set nu                      " Showing line numbers
 set fo-=t
 set infercase
 
-" Folding
-if has('folding')
-    set foldmethod=marker   " Fold on marker
-    set foldlevel=999       " High default so folds are shown to start
-endif
-
 " X-clipboard support
 if has('unnamedplus')
-    set clipboard+=unnamed     " enable x-clipboard
+    set clipboard+=unnamed
 endif
 
-" Term
-" set mouse=a                    " Enable mouse usage (all modes) in terminals
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
 if &term =~ "xterm"
@@ -77,7 +69,7 @@ set splitbelow splitright
 autocmd FileType javascript setlocal expandtab shiftwidth=2 softtabstop=2 cindent
 autocmd FileType ruby setlocal expandtab shiftwidth=2 softtabstop=2 cindent
 autocmd FileType *.ejs setlocal expandtab shiftwidth=2 softtabstop=2 cindent
-autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4 cindent
+
 autocmd BufNewfile,BufRead *.tpl set filetype=html
 autocmd BufNewFile,BufRead *.ejs set filetype=html
 
@@ -85,12 +77,6 @@ autocmd WinLeave * set nocursorline
 autocmd WinEnter * set cursorline
 
 set backspace=indent,eol,start
-
-" Some gui settings
-if has("gui_running")
-    set guioptions=agimP
-    set guifont=Monaco:h13
-endif
 
 " Require settings
 for fpath in split(globpath('~/.vim/settings', '*.vim'), '\n')

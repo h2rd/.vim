@@ -5,19 +5,18 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " my Bundles
-Bundle 'tpope/vim-jdaddy'
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-unimpaired'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
 Bundle 'h2rd/vim-snipmate-mocha'
 Bundle 'pangloss/vim-javascript'
-Bundle "honza/vim-snippets"
+Bundle 'honza/vim-snippets'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'vim-scripts/tComment'
 Bundle 'tmhedberg/matchit'
@@ -40,10 +39,18 @@ Bundle 'klen/python-mode'
 Bundle 'mattn/emmet-vim'
 Bundle 'digitaltoad/vim-jade'
 
-" Bundle 'vim-scripts/pipe2eval' " is not works
 Bundle 'buztard/vim-nomad'
 Bundle 'sjl/gundo.vim'
 
 Bundle 'christoomey/vim-tmux-navigator'
 
 Bundle 'nanotech/jellybeans.vim'
+Bundle 'mhinz/vim-hugefile'
+
+" Rails
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-rake'
+
+Bundle 'tpope/vim-jdaddy'

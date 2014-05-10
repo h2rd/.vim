@@ -13,14 +13,6 @@ if has("autocmd")
 
         au BufRead * :set cpoptions+=J
 
-        au InsertEnter * :set listchars-=trail:⌴
-        au InsertLeave * :set listchars+=trail:⌴
-
-        " Autosave last session
-        " if has('mksession')
-        "     au VimLeavePre * exe "mks! " g:SESSION_DIR.'/last.vim'
-        " endif
-
         " Save current open file when window focus is lost
         au FocusLost * if &modifiable && &modified | write | endif
 
