@@ -54,3 +54,4 @@ Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-rake'
 
 Bundle 'tpope/vim-jdaddy'
+Bundle 'xmisao/rubyjump.vim'
